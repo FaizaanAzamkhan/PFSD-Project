@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Page</title>
+  <style>
+    body {
+      background-color: #FFF1DC;
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-top: 50px;
+      margin-bottom: 30px;
+    }
+    form {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    input[type="text"], input[type="email"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    }
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%;
+    }
+    input[type="submit"]:hover {
+      background-color: #3e8e41;
+    }
+    label {
+      display: block;
+      color: #666;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    .error {
+      color: red;
+      margin-top: 5px;
+      font-size: 0.8em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Room Booking Form</h1>
+   <form action ="" method = "POST">
+       {% csrf_token %}
+    <label for="roomtype">RoomType</label>
+    <input type="text" id="roomtype" name="fn" required>
+
+       <label for="conditioner">AC/NON AC</label>
+    <input type="text" id="conditioner" name="ln" required>
+
+       <label for="mobile">Mobile</label>
+    <input type="text" id="mobile" name="mb" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="em" required>
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="pwd" required>
+
+  Date of birth  <input type="date" id="DOB" name="dob" required><br>
+<br>
+     <button onclick="prompt()">BOOK ROOM</button>
+
+
+
+  </form>
+
+<script>
+
+    function prompt(){
+    alert(" Room booked successfully....!")
+    }
+
+</script>
+
+</body>
+</html>
